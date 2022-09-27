@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+
+</head>
+
+<body>
+        <input class="input" type="text">
+        <input type="submit">
+
+        <div class="ap"></div>
+<script>
+
+
+function append_HTML_element() {
+
+var x  = $("input[type=text]").val() ;
+
+var np1 = document.createElement( "p" );
+np1.innerText = x;
+var y  = $("div.ap").append(np1) ;
+
+console.log(x); 
+}
+
+
+$(document).ready(function() {
+
+$("input[type=submit]").click( function(){
+    append_HTML_element();
+} );
+
+});
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jquery Hide In Example </title>
+</head>
+<body>
+    <h1>
+            <p style="display:none;"> Paragraph one.</p>
+            <p style="display:none;"> Paragraph Two.</p>
+            <p style="display:none;"> Paragraph Three.</p> 
+    </h1>  
+<div>
+       <button class = "btn_show"  >  Fade In</button>
+        <br>
+       <button class="btn_hide">Fade Out  </button>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn_hide").click(function(){
+         $("p").fadeOut(2500);
+        });
+        $(".btn_show").click(function(){
+        
+         $("p").fadeIn(2500);
+    })});
+    </script>
+</body>
+</html>
