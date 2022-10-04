@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Midterm Question 2</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    .myDiv{
+        padding: 10px;
+        background: orange;
+        margin: 5px;
+    }
+    #btns{
+        display: block;
+        margin: 10px
+    }
+</style>
+<script>
+$(document).ready(function(){
+    $(".inlineb-btn").click(function(){
+        $(".myDiv").css("display", "inline-block");
+    });
+    $(".block-btn").click(function(){
+        $(".myDiv").css("display", "block");
+    });
+    $(".inline-btn").click(function(){
+        $(".myDiv").css("display", "inline");
+    });
+});
+</script>
+</head>
+<body>
+    <div class="myDiv">Football</div>
+    <div class="myDiv">Frisbee</div>
+    <div class="myDiv">Tennis</div>
+    <button type="button" id="btns" class="inlineb-btn">Display inline block</button>
+    <button type="button" id="btns" class="block-btn">Display block</button>
+    <button type="button" id="btns" class="inline-btn">Display inline</button>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Midterm Extra Credit</title>
+        <script>
+            function check() {
+                if( document.myForm.Name.value == "" ) {
+                    alert( "Please enter a correct first name!" );
+                    document.myForm.Name.focus() ;
+                    return false;
+                }
+                if( document.myForm.LastName.value == "" ) {
+                    alert( "Please enter a correct last name!" );
+                    document.myForm.LastName.focus() ;
+                    return false;
+                }
+                if ( document.myForm.PhoneNumber.value == "" || isNaN( document.myForm.PhoneNumber.value ) ||
+                    document.myForm.PhoneNumber.value.length != 10 ) {
+                    alert( "Please enter a phone number in this format: (xxx) xxx-xxxx where x is a number" );
+                    document.myForm.PhoneNumber.focus() ;
+                    return false;
+                }
+                if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+                    document.myForm.Zip.value.length != 5 ) {
+                    alert( "Please enter a zip code (#####)." );
+                    document.myForm.Zip.focus() ;
+                    return false;
+                }
+                alert( "Done Login" );
+            }
+        </script>
+    </head>
+    <body>
+        <form name = "myForm" onsubmit = "return(check());">
+        <table cellspacing = "2" cellpadding = "2" border = "1">
+            <tr>
+                <td align = "right">FirstName </td>
+                <td><input type = "text" name = "Name" /></td>
+            </tr>
+            <tr>
+                <td align = "right">LastName</td>
+                <td><input type = "text" name = "LastName" /></td>
+            </tr>
+            <tr>
+                <td align = "right">PhoneNumber</td>
+                <td><input type = "number" name = "PhoneNumber" placeholder = "(xxx) xxx-xxxx" /></td>
+            </tr>
+            <tr>
+                <td align = "right">Zip Code</td>
+                <td><input type = "text" name = "Zip" /></td>
+            </tr>
+            <tr>
+                <td align = "right"></td>
+                <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
